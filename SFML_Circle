@@ -72,14 +72,14 @@ void VRPN_CALLBACK handle_tracker(void* userData, const vrpn_TRACKERCB b)
 
 	result = abs(x_leftHand - x_rightHand);
 
-	//Motion State
+	//Clap
 	if (result < 0.4) {
 		cout << "change Blue\n";
 		if (state == 0) {
 			changeBlue();
 		}
 	}
-
+	//Put your hands up
 	if (y_head < y_leftHand && y_head < y_rightHand){
 		if (state == 1){
 			cout << "change RED\n";
